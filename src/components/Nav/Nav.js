@@ -12,6 +12,9 @@ import Section from 'components/Section';
 import styles from './Nav.module.scss';
 import NavListItem from 'components/NavListItem';
 
+import Image from "next/image";
+import logo from 'components/Resources/logo.png';
+
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
 
@@ -181,7 +184,10 @@ const Nav = () => {
       <Section className={styles.navSection}>
         <p className={styles.navName}>
           <Link href="/">
-            <a>{title}</a>
+          
+            <Image src={logo} alt='garden school logo' />
+          
+            {/* <a>{title}</a> */}
           </Link>
         </p>
         <ul className={styles.navMenu}>
@@ -189,7 +195,8 @@ const Nav = () => {
             return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
           })}
         </ul>
-        <div className={styles.navSearch}>
+        {/* Hide Search functionality for now */}
+        {/* <div className={styles.navSearch}>
           {searchVisibility === SEARCH_HIDDEN && (
             <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
               <span className="sr-only">Toggle Search</span>
@@ -229,7 +236,7 @@ const Nav = () => {
               </div>
             </form>
           )}
-        </div>
+        </div> */}
       </Section>
     </nav>
   );
