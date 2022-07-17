@@ -7,6 +7,8 @@ import { categoryPathBySlug } from 'lib/categories';
 import Section from 'components/Section';
 import Container from 'components/Container';
 
+import socialIcons from "@constants/socialIcons";
+
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -85,6 +87,21 @@ const Footer = () => {
 
       <Section className={styles.footerLegal}>
         <Container>
+
+        <div className={styles.icons}>
+        {socialIcons.map((item, index) => {
+          return (
+            <a
+              key={index}
+              href={item.url}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {item.icon}
+            </a>
+          );
+        })}
+      </div>
           <p> 
             Copyright &copy; {title} {new Date().getFullYear()}  All Rights Reserved
           </p>

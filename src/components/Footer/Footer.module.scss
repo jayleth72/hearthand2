@@ -75,4 +75,15 @@
     text-align: center;
     margin: 0;
   }
+
+  .icons a {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: all 0.3s linear;
+  }
+  .icons a:hover {
+    color: #ff8001;
+  }
 }
