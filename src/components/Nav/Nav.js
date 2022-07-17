@@ -15,6 +15,8 @@ import NavListItem from 'components/NavListItem';
 import Image from "next/image";
 import logo from 'components/Resources/logo.png';
 
+import socialIcons from "@constants/socialIcons";
+
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
 
@@ -237,6 +239,20 @@ const Nav = () => {
             </form>
           )}
         </div> */}
+        <div className={styles.navSocialLinks}>
+          {socialIcons.map((item, index) => {
+            return (
+              <a
+                key={index}
+                href={item.url}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {item.icon}
+              </a>
+            );
+          })}
+        </div>
       </Section>
     </nav>
   );

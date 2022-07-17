@@ -230,4 +230,21 @@
       }
     }
   }
+
+  
+}
+
+.navSocialLinks {
+  display: flex;
+  line-height: 0;
+}
+.navSocialLinks a {
+  color: #ff8001;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+}
+.navSocialLinks a:hover {
+  color: #222;
+  transform: translateY(-5px);
 }
