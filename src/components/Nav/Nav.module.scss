@@ -9,7 +9,7 @@
 .navSection {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   height: 100%;
   padding-top: 0;
@@ -157,7 +157,7 @@
 .navMenu {
   display: flex;
   align-items: center;
-
+  
   flex-grow: 0;
   list-style: none;
   padding: 0.5rem;

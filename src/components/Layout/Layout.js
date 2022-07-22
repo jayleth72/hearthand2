@@ -8,6 +8,7 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 import Nav from 'components/Nav';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
+import Hero from 'components/Hero';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -65,9 +66,9 @@ const Layout = ({ children }) => {
       <Helmet {...helmetSettings} />
 
       <Nav />
-
+     
       <Main>{children}</Main>
-
+      <Hero />
       <Footer />
     </div>
   );
